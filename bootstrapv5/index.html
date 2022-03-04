@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bootstrap</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <style>
+            .paragraph {
+                font-size: 50px;
+                color: blueviolet;
+            }
+            .image_carousel {
+                height: 50px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+        >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/car.png" class="d-block w-100" alt="..." />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquam mollitia voluptatum aperiam reprehenderit,
+                        doloremque esse ipsa! Nobis enim iusto pariatur
+                        explicabo culpa cum ut facere maiores voluptas natus,
+                        unde magnam.
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <img src="/image.png" class="d-block w-100" alt="..." />
+                    <p>2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="/car.png" class="d-block w-100" alt="..." />
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Kampus</th>
+                    <th scope="col">Fakultas</th>
+                    <th scope="col">Jurusan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Samuel</td>
+                    <td>President University</td>
+                    <td>Computing</td>
+                    <td>IT</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Dhewan</td>
+                    <td>Univ Narotama</td>
+                    <td>Ilmu Komputer</td>
+                    <td>Sistem Komputer</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Riyas</td>
+                    <td>Univ Mataram</td>
+                    <td>Fakultas Teknik</td>
+                    <td>Teknik Elektro</td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="/image.png" class="w-50 rounded-circle" alt="..." />
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

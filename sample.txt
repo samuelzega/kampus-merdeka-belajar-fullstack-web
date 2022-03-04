@@ -1,0 +1,11 @@
+- masi lumayan bingung sama flex dan grid
+- nyoba positon
+- cara buat structure html dan css nya
+- belum tau banyak tag html dan css 
+
+
+
+saran metode yang kita pake
+- praktek nyobain, 
+- nanyain apa udah paham
+- 

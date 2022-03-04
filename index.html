@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .header {
+            background-color: #F1F3FF;
+            
+        }
+       .navbar {
+           display: flex;
+           justify-content: space-around;
+       } 
+       .logo {
+
+       }
+       .nav_menu {
+        display: flex;
+        align-items: center;
+       }
+
+       .button_menu {
+        background: #5CB85F;
+        border-radius: 2px;
+        padding: 0;
+        border: 2px solid #5CB85F;
+        color: #F1F3FF;
+        height: 30px;
+       }
+
+       .menu_link {
+           padding: 0 10px ;
+       }
+       .content {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 0 ;
+        margin-top: 30px;
+       }
+       .left_side {
+           padding-left: 30px;
+       }
+
+       .background_blue {
+           width: 100%;
+           background-color: blue;
+           
+            border-radius: 60px 0px 0px 0px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            
+            
+       }
+
+       .car_image{
+           z-index: 100;
+           position: relative;
+           margin-top: 10px;
+       }
+
+       .right_side {
+        position: relative;
+        
+       }
+
+       
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="header">
+
+        <div class="navbar">
+            <h4 class="logo">LOGO COMPANY</h4>
+            <div class="nav_menu">
+                <p class="menu_link">Our Services</p>
+                <p class="menu_link">Why Us</p>
+                <p class="menu_link">Testimonial</p>
+                <p class="menu_link">FAQ</p>
+                <button class="button_menu">Register</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left_side">
+                <h3>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h3>
+                <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+                <button class="button_menu">Mulai Sewa Mobil</button>
+            </div>
+            <div class="right_side">
+                <div class="background_blue"></div>
+                <img class="car_image" width="180px" height="110px" src="car.png" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
