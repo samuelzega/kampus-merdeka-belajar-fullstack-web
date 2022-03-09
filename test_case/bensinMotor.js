@@ -29,6 +29,30 @@ const kendaraan = [
         tahun: 2019,
         type: 'motor',
     },
+    {
+        pemilik: '4',
+        transmisi: 'manual',
+        tahun: 2019,
+        type: 'motor',
+    },
+    {
+        pemilik: '5',
+        transmisi: 'manual',
+        tahun: 2019,
+        type: 'motor',
+    },
+    {
+        pemilik: '5',
+        transmisi: 'manual',
+        tahun: 2019,
+        type: 'motor',
+    },
+    {
+        pemilik: '1',
+        transmisi: 'manual',
+        tahun: 2019,
+        type: 'motor',
+    },
 ]
 
 const orang = [
@@ -69,15 +93,40 @@ const orang = [
     },
 ]
 
-const hasil = [
-    {
-        pemilik: 'nama',
-        kendaraan: {
-            transmisi: '',
-            tahun: 0,
-            type: '',
-        },
-    },
-]
+// const hasil = [
+//     {
+//         pemilik: 'rahma',
+//         kendaraan: {
+//             transmisi: 'matic',
+//             tahun: 2017,
+//             type: 'mobil',
+//         },
+//     },
+// ]
 
-for (let i = 0; i < array.length; i++) {}
+let hasil = []
+for (let i = 0; i < kendaraan.length; i++) {
+    for (let j = 0; j < orang.length; j++) {
+        if (kendaraan[i].pemilik === orang[j].id) {
+            hasil.push({
+                pemilik: orang[j].nama,
+                kendaraan: {
+                    transmisi: kendaraan[i].transmisi,
+                    tahun: kendaraan[i].tahun,
+                    type: kendaraan[i].type,
+                },
+            })
+        }
+    }
+}
+console.log(hasil)
+
+// const hasil2 = [
+//     {
+//         pemilik: 'rahma',
+//         kendaraan: [
+//             { transmisi: 'matic', tahun: 2017, type: 'mobil' },
+//             { transmisi: 'matic', tahun: 2017, type: 'mobil' },
+//         ],
+//     },
+// ]
