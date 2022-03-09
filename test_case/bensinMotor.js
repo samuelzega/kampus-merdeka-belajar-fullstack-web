@@ -121,6 +121,15 @@ for (let i = 0; i < kendaraan.length; i++) {
 }
 console.log(hasil)
 
+// soal no 1
+// yang kita kerjain tadi dibuat jadi function
+// soal no 2
+// bikin function buat nyari mobil berdasarkan tahun
+// soal no 3
+// bikin function buat nge sort hasil dari function 1  berdasarkan nama pemilik
+// soal no 4
+// bikin function buat untuk menghasilkan data sperti dibawah ini
+
 // const hasil2 = [
 //     {
 //         pemilik: 'rahma',
