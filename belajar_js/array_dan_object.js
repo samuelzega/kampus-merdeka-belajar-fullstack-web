@@ -142,7 +142,7 @@ const fsw6 = [
     },
 ]
 const hobyBola = getHobyBola(fsw6)
-console.log(hobyBola)
+// console.log(hobyBola)
 
 function getHobyBola(komponen) {
     const newArr = []
@@ -163,3 +163,8 @@ function getHobyBola(komponen) {
 //     }
 // }
 // console.log(studentHobyBola)
+
+const newFsw6 = [fsw6]
+const fsw6TitikTitik = [...fsw6]
+console.log(newFsw6)
+console.log(fsw6TitikTitik)
