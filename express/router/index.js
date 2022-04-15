@@ -1,11 +1,11 @@
 const express = require('express')
-const app = express()
+const router = express.Router()
 const userRouter = require('./user')
 
-app.use('/user', userRouter)
+router.use('/user', userRouter)
 // app.use('/books', userRouter)
 // app.use('/checkout', userRouter)
 // app.use('/payment', userRouter)
 
 
-module.exports = app
+module.exports = router
