@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         { sequelize }
     )
     Students.associate = function(models) {
-        Students.belongsToMany(models.Subjects, { through: 'StudentSubject' })
+        Students.belongsToMany(models.Subjects, { through: 'StudentSubjects' })
         Students.belongsTo(models.Groups)
       }
     return Students

@@ -1,11 +1,10 @@
-const { Subjects } = require('../models')
+const { StudentSubjects, Subjects, Students } = require('../models')
 
 module.exports = class {
-    static addSubject(req, res, next) {
-        Subjects.create({
-            title: req.body.title,
-            desc: req.body.desc,
-            duration: req.body.duration,
+    static addStudentSubject(req, res, next) {
+        StudentSubjects.create({
+            StudentId: req.body.studentId,
+            SubjectId: req.body.subjectId,
         })
             .then((result) => {
                 // console.log(result, '========');
@@ -21,12 +20,15 @@ module.exports = class {
             })
     } 
 
-    static getAllSubject(req, res, next) {
-        Subjects.findAll()
+    static getAllStudentSubject(req, res, next) {
+        StudentSubjects.findAll({
+            where: {},
+            include: [{model: Students}, {model: Subjects}]
+        })
             .then((result) => {
                 // console.log(result, '========');
                 res.status(201).send({
-                    status: 200,
+                    status: 201,
                     message: 'New subject created!',
                     data: result,
                 })

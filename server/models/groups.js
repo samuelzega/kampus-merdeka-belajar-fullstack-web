@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     )
     Groups.associate = function(models) {
-      Groups.hasMany(models.Subjects)
+      Groups.belongsTo(models.Subjects, {foreignKey: 'SubjectId'})
     }
     return Groups
 }

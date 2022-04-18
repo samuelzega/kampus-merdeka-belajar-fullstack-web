@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         { sequelize }
     )
     Subjects.associate = function(models) {
-      Subjects.belongsToMany(models.Students, { through: 'StudentSubject' })
-      Subjects.hasOne(models.Groups)
+      Subjects.belongsToMany(models.Students, { through: 'StudentSubjects' })
+      Subjects.hasMany(models.Groups, {foreignKey: 'id'})
     }
     return Subjects
 }
