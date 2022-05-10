@@ -2,9 +2,10 @@ const {StudentSubjects, Students, Subjects} = require('../models')
 
 module.exports = class {
     static addStudentSubject(req, res, next) {
+        
         StudentSubjects.create({
             SubjectId: req.body.SubjectId,
-            StudentId: req.body.StudentId,
+            StudentId: req.studentlogin.id,
         })
             .then((result) => {
                 res.status(201).send({

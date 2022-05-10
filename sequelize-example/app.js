@@ -2,7 +2,11 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const session = require("express-session")
 var logger = require('morgan');
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 var indexRouter = require('./routes/index');
 
@@ -17,6 +21,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret: process.env.COOKIE_SECRET || 'Rahasia',
+  resave: false,
+  saveUninitialized: false,
+}))
 
 app.use('/', indexRouter);
 // catch 404 and forward to error handler
@@ -34,5 +44,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 module.exports = app;

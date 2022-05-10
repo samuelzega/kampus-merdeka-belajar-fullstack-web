@@ -17,8 +17,14 @@ module.exports = {
       GroupId: {
         type: Sequelize.INTEGER
       },
+      email: {
+        type: Sequelize.STRING
+      },
       age: {
         type: Sequelize.INTEGER
+      },
+      password: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "samuelzega",
-    "database": "binarfsw",
+    "database": "binarfswasd",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
