@@ -56,7 +56,7 @@ module.exports = class {
             }
             // const token = jwt.generateToken({email: student.email, password: student.password})
             const secureStudent = student.dataValues
-            delete secureStudent.password
+            // delete secureStudent.password
             req.session.isAuthenticated = true;
             req.session.user = secureStudent;
 

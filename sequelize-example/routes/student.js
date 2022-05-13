@@ -4,7 +4,7 @@ const StudentController = require('../controller/student')
 const AuthSession = require('../middleware/authenticationSession')
 
 /* GET users listing. */
-router.get('/',StudentController.getAllStudent);
+router.get('/', StudentController.getAllStudent);
 router.post('/register',StudentController.addStudent);
 router.post('/login',StudentController.login);
 router.get('/getdatafromtoken',AuthSession);

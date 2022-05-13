@@ -13,9 +13,11 @@ module.exports = async (req, res, next) => {
         })
         if (!student) {
             res.status(404).send({ message: 'user not found' })
-        } else {
+        } else if(student.dataValues.role == 'superadmin' || student.dataValues.role == 'admin ') {
             req.studentlogin = student.dataValues
             next()
+        }else {
+            res.status(403).send({message: 'user not authorized'})
         }
     } catch (err) {
         res.status(404).send({
