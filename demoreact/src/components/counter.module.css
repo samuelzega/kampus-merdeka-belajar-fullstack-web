@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+  }
+  
+  .button{
+    background-color: antiquewhite;
+    padding: 2px 30px;
+    border-radius: 2px;
+    color: brown;
+    cursor: pointer;
+  }
+
+  .number{
+    padding: 0 30px;
+  }

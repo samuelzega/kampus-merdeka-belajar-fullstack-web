@@ -1,18 +1,22 @@
+import { Fragment, useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import SampleComponent from './sampleComponent'
+import { Button, DatePicker, version } from 'antd'
+import Counter from './components/counter'
 
 function App() {
-    const data = 'sample sample sample'
+    const [angka, setAngka] = useState(0)
     return (
+     
+      <>
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <p>{data}</p>
-                <SampleComponent />
+                <Counter angka={angka} setAngka={setAngka} />
+                <div>hasil = {angka}</div>
+                <h1>antd version: {version}</h1>
+                <DatePicker />
+                <Button>sample</Button>
                 <a
                     className="App-link"
                     href="https://reactjs.org"
@@ -23,6 +27,10 @@ function App() {
                 </a>
             </header>
         </div>
+      <div>
+
+      </div>
+      </>
     )
 }
 
