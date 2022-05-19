@@ -1,37 +1,25 @@
-import { Fragment, useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import { Button, DatePicker, version } from 'antd'
-import Counter from './components/counter'
+import React from 'react'
+import HomePage from '../src/pages/Home'
+import styles from './App.module.css'
+import {Route, Routes} from 'react-router-dom'
 
-function App() {
-    const [angka, setAngka] = useState(0)
+export default function App() {
     return (
-     
-      <>
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <Counter angka={angka} setAngka={setAngka} />
-                <div>hasil = {angka}</div>
-                <h1>antd version: {version}</h1>
-                <DatePicker />
-                <Button>sample</Button>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
-      <div>
-
-      </div>
-      </>
+        <Routes>
+            <Route path="/" element={<HomePage />}>
+                {/* <Route path="expenses" element={<Expenses />} />
+                <Route path="invoices" element={<Invoices />}>
+                    <Route path=":invoiceId" element={<Invoice />} />
+                </Route>
+                <Route
+                    path="*"
+                    element={
+                        <main style={{ padding: '1rem' }}>
+                            <p>There's nothing here!</p>
+                        </main>
+                    }
+                /> */}
+            </Route>
+        </Routes>
     )
 }
-
-export default App
