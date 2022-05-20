@@ -1,5 +1,6 @@
 import React from 'react'
 import HomePage from '../src/pages/Home'
+import LoginPage from '../src/pages/Login'
 import styles from './App.module.css'
 import {Route, Routes} from 'react-router-dom'
 
@@ -20,6 +21,7 @@ export default function App() {
                     }
                 /> */}
             </Route>
+            <Route path='/login' element={<LoginPage />}></Route>
         </Routes>
     )
 }
