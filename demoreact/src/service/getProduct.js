@@ -5,6 +5,7 @@ export default async () => {
         const response = await api({
             url: '/products'
         })
+        // console.log(response);
         return response.data
     } catch (error) {
         console.log(error);

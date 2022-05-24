@@ -4,8 +4,10 @@ import Navbar from '../../components/navbar'
 import Iklan from '../../components/ads'
 import ProductCard from '../../components/productCard'
 import getProductService from '../../service/getProduct'
+import {useSelector} from 'react-redux'
 
 export default function Home() {
+    const counterState = useSelector((state) => state.counter)
     const [products, setProducts] = useState([])
     const getProduct = async () => {
         const allProduct = await getProductService()
@@ -25,6 +27,9 @@ export default function Home() {
                 <Navbar />
                 <div className={styles.header_desc}>
                     Fullfilling dreams with strings attached
+                </div>
+                <div className={styles.header_desc}>
+                    {counterState.number}
                 </div>
             </div>
             <Iklan />
